@@ -1,5 +1,7 @@
 {
   "imports": {
+    "deco-sites/petopia/": "./",
+
     "deco-sites/bf-onserp/": "./",
 
     "$store/": "./",
