@@ -11,25 +11,29 @@ export interface Props {
 const ProductViews = ({productID}: Props) => {
 
     const [views, setViews] = useState(0)
+    
     useEffect(() => {
-        const userId = Math.random(); 
-        const socket = new WebSocket(`ws://localhost:7000/product/${productID}?userId=${userId}`);
+        const randomId = Math.random();
+        const socket = new WebSocket(`ws://localhost:7000/products?randomId=${randomId}&skuId=${productID}`);
+
         socket.onmessage = (m) => {
             const data = JSON.parse(m.data);
-            console.log("DATA: ", data);
-            setViews(data.usernames.length);
+            if (data.skuId === productID) {
+                setViews(data.length);
+            }
         };
     
         socket.addEventListener('close', (event) => {
             console.log('Conexão fechada:', event);
         });
     
-        socket.send(
+/*         socket.send(
             JSON.stringify({
                 event: "views-update",
-                message: userId,
+                message: randomId,
             }),
-        );
+        ); */
+
     }, [productID]);
 
     return (
