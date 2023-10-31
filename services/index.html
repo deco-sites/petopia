@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Olá, Mundo!
+
+    <script>
+      function setupWebSocket() {
+        const socket = new WebSocket("ws://localhost:7000/users"); // Substitua com a URL do seu servidor WebSocket
+
+        socket.addEventListener("open", (event) => {
+          console.log("Conexão estabelecida:", event);
+
+          // Enviar uma mensagem quando a conexão estiver aberta
+          socket.send("Olá, servidor!");
+        });
+
+        socket.addEventListener("close", (event) => {
+          console.log("Conexão fechada:", event);
+        });
+      }
+
+      setupWebSocket();
+    </script>
+  </body>
+</html>
