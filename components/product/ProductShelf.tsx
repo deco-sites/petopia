@@ -11,11 +11,13 @@ import { useOffer } from "$store/sdk/useOffer.ts";
 import { usePlatform } from "$store/sdk/usePlatform.tsx";
 import type { Product } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
+import type { ImageWidget } from "apps/admin/widgets.ts";
 
 export interface Props {
   products: Product[] | null;
-  title?: string;
+  title?: string; 
   description?: string;
+  banner?: ImageWidget,
   layout?: {
     headerAlignment?: "center" | "left";
     headerfontSize?: "Normal" | "Large";
@@ -27,6 +29,7 @@ function ProductShelf({
   products,
   title,
   description,
+  banner,
   layout,
   cardLayout,
 }: Props) {
@@ -38,13 +41,14 @@ function ProductShelf({
   }
 
   return (
-    <div class="text-white bg-neutral-900">
+    <div class="text-white">
       <div class="w-full container  py-8 flex flex-col gap-12 lg:gap-16 lg:py-10">
         <Header
           title={title || ""}
           description={description || ""}
           fontSize={layout?.headerfontSize || "Large"}
           alignment={layout?.headerAlignment || "center"}
+          banner={banner}
         />
 
         <div

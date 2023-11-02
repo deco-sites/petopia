@@ -6,10 +6,16 @@ import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import Alert from "./Alert.tsx";
 import Navbar from "./Navbar.tsx";
 import { headerHeight } from "./constants.ts";
+import Icon, { AvailableIcons } from "$store/components/ui/Icon.tsx";
+
+export interface AlertProps {
+  icon?: AvailableIcons;
+  message: string
+}
+
 
 export interface Props {
-  alerts: string[];
-
+  alerts: AlertProps[];
   /** @title Search Bar */
   searchbar?: Omit<SearchbarProps, "platform">;
 
@@ -21,32 +27,27 @@ export interface Props {
 
   /** @title Logo */
   logo?: { src: ImageWidget; alt: string };
+  message: string;
 }
 
-function Header({
-  alerts,
-  searchbar,
-  navItems,
-  logo,
-}: Props) {
+function Header({ alerts, searchbar, navItems, logo }: Props) {
   const platform = usePlatform();
   const items = navItems ?? [];
 
   return (
     <>
       <header style={{ height: headerHeight }}>
-        <Drawers
-          menu={{ items }}
-          searchbar={searchbar}
-          platform={platform}
-        >
+        <Drawers menu={{ items }} searchbar={searchbar} platform={platform}>
           <div class="bg-black fixed w-full z-50">
-            <Alert alerts={alerts} />
             <Navbar
               items={items}
               searchbar={searchbar && { ...searchbar, platform }}
               logo={logo}
             />
+            {
+              alerts.length && 
+              <Alert alerts={alerts} />
+            }
           </div>
         </Drawers>
       </header>

@@ -108,7 +108,7 @@ function ProductCard(
   return (
     <div
       id={id}
-      class={`card card-compact group w-full ${
+      class={`card card-compact group w-full border-purple-300 rounded-lg	 ${
         align === "center" ? "text-center" : "text-start"
       } ${l?.onMouseOver?.showCardShadow ? "lg:hover:card-bordered" : ""}
         ${
@@ -164,7 +164,7 @@ function ProductCard(
         <a
           href={url && relative(url)}
           aria-label="view product"
-          class="grid grid-cols-1 grid-rows-1 w-full"
+          class="grid grid-cols-1 grid-rows-1 w-full border border-soli"
         >
           <Image
             src={front.url!}
@@ -236,7 +236,7 @@ function ProductCard(
             <div class="flex flex-col gap-0">
               {l?.hide?.productName ? "" : (
                 <h2
-                  class="truncate text-base lg:text-lg text-white"
+                  class="truncate text-[#373737] lg:text-lg text-base"
                   dangerouslySetInnerHTML={{ __html: name ?? "" }}
                 />
               )}
@@ -264,7 +264,7 @@ function ProductCard(
               >
                 {formatPrice(listPrice, offers?.priceCurrency)}
               </div>
-              <div class="text-red-500 text-base lg:text-xl font-semibold">
+              <div class="text-[#6A5095] text-2xl lg:text-xl font-semibold">
                 {formatPrice(price, offers?.priceCurrency)}
               </div>
             </div>
