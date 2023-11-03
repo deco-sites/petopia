@@ -43,7 +43,7 @@ export default function Benefits(props: Props) {
 
   const listOfBenefits = benefits.map((benefit, index) => {
     return (
-      <div class="bg-[#F7F3FE] p-8 rounded-md lg:rounded-xl flex flex-col items-center justify-center">
+      <div class="bg-[#F7F3FE] px-8 py-4 rounded-md lg:rounded-xl flex flex-col items-center justify-center">
         <div class="m-auto">
           <Icon
             id={benefit.icon}
@@ -66,7 +66,7 @@ export default function Benefits(props: Props) {
 
   return (
     <div>
-      <div class="w-full container px-4 py-12 flex flex-col gap-8 lg:gap-10 lg:py-10 lg:px-0">
+      <div class="wrapper flex flex-col gap-8 lg:gap-10">
         <Header
           title={title}
           description={description}

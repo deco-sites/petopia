@@ -136,7 +136,7 @@ function CategoryGrid(props: Props) {
             </div>
           )
           : (
-            <div class="flex gap-8">
+            <div class="flex gap-2">
               {list.map((item) => (
                 <div class="">
                   <Card

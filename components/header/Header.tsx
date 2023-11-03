@@ -36,7 +36,7 @@ function Header({ alerts, searchbar, navItems, logo }: Props) {
 
   return (
     <>
-      <header style={{ height: headerHeight }}>
+      <header style={{ height: "118px" }}>
         <Drawers menu={{ items }} searchbar={searchbar} platform={platform}>
           <div class="bg-black fixed w-full z-50">
             <Navbar

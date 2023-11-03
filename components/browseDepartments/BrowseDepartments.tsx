@@ -17,8 +17,8 @@ const BrowseDepartments = (props: Props) => {
   const { title, description, departments } = props;
   return (
     <section id={useId()}>
-      <div class="container text-center px-4 py-7 flex flex-col gap-8 lg:gap-10 md:px-0 lg:py-10">
-        <h2 class="text-3xl	 font-semibold text-[#4f3c70]">{title}</h2>
+      <div class="wrapper text-center flex flex-col gap-4 lg:gap-8">
+        <h2 class="title">{title}</h2>
 
         {description && <p class="text-base	text-[#4F3C70]">{description}</p>}
 

@@ -18,27 +18,25 @@ export interface Props {
 const simpleBanner = (props: Props) => {
   const { desktop, mobile, alt, link } = props;
   return (
-    <section id={useId()} class="container">
+    <section id={useId()} class="wrapper">
       <a href={link} class="text-center px-4 py-7">
-        <Picture class="object-cover px-4 w-full m-auto h-full rounded-md lg:rounded-xl">
+        <Picture>
           <Source
-            class="object-cover px-4 w-full m-auto h-full rounded-md lg:rounded-xl"
             media="(max-width: 767px)"
-            fetchPriority={"auto"}
+            fetchPriority="auto"
             src={mobile}
             width={398}
             height={220}
           />
           <Source
-            class="object-cover px-4 w-full m-auto h-full rounded-md lg:rounded-xl"
-            fetchPriority={"auto"}
+            fetchPriority="auto"
             src={desktop}
             width={1200}
             height={300}
           />
           <img
-            class="object-cover px-4 w-full m-auto h-full rounded-md lg:rounded-xl"
-            loading={"lazy"}
+            class="object-cover w-full rounded-md lg:rounded-xl"
+            loading="lazy"
             width={398}
             height={220}
             src={desktop}

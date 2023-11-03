@@ -17,9 +17,9 @@ const Brands = (props: Props) => {
   return (
     <section>
       <div class=""></div>
-      <div class="container text-center px-4 py-7 flex flex-col gap-8 lg:gap-10 md:px-0 lg:py-10">
+      <div class="wrapper text-center flex flex-col gap-8 lg:gap-10">
         {description && <p class="text-lg rounded-[40px] text-[#6A5095] border border-solid border-[#6A5095] w-[220px] m-auto">{description}</p>}
-        <h2 class="text-3xl w-auto font-semibold text-[#4f3c70]">{title}</h2>
+        <h2 class="title">{title}</h2>
 
         <div class="flex gap-3 items-stretch justify-center flex-wrap">
           {brands?.map((brand) => {

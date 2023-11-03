@@ -95,9 +95,8 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
       aria-label={action?.label}
       class="relative h-auto overflow-y-hidden w-full"
     >
-      <Picture class="rounded-md lg:rounded-xl " preload={lcp}>
+      <Picture preload={lcp}>
         <Source
-          class="object-cover px-4 lg:px-0 w-full m-auto h-full rounded-md lg:rounded-xl"
           media="(max-width: 767px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={mobile}
@@ -105,14 +104,13 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           height={220}
         />
         <Source
-          class="object-cover px-4 lg:px-0 w-full m-auto h-full rounded-md lg:rounded-xl"
           fetchPriority={lcp ? "high" : "auto"}
           src={desktop}
           width={1200}
           height={300}
         />
         <img
-          class="object-cover px-4 lg:px-0 w-full m-auto h-full rounded-md lg:rounded-xl"
+          class="object-cover w-full rounded-md lg:rounded-xl"
           loading={lcp ? "eager" : "lazy"}
           width={398}
           height={220}
@@ -190,8 +188,8 @@ function BannerCarousel(props: Props) {
   const id = useId();
 
   return (
-    <div id={id} class="flex flex-col mt-7">
-      <Slider class="carousel carousel-center container ol-span-full row-span-full gap-6">
+    <div id={id} class="flex flex-col wrapper">
+      <Slider class="carousel carousel-center ol-span-full row-span-full gap-6">
         {images?.map((image, index) => (
           <Slider.Item index={index} class="carousel-item w-full">
             <BannerItem image={image} lcp={index === 0 && preload} />
