@@ -27,7 +27,7 @@ function Navbar({
   return (
     <>
       <div class="bg-[#f9fafb] flex flex-row items-center w-full justify-between px-2">
-        <div class="flex flex-1 justify-start items-center gap-x-3" >
+        <div class="flex flex-1 justify-start items-center gap-x-3">
           <MenuButton />
           {logo && (
             <a
@@ -45,13 +45,31 @@ function Navbar({
             </a>
           )}
         </div>
-
+        <div class="hidden md:flex">
+          <ul class="flex gap-4 items-center">
+            <li>
+              <a href="#" class="text-md text-[#8465BA]">
+                Black Friday Pet
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-md text-[#8465BA]">
+                Categoria em oferta
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-md text-[#8465BA]">
+                Cadastre-se e ganhe
+              </a>
+            </li>
+          </ul>
+        </div>
         <div class=" flex-1 flex justify-end items-center gap-x-3	">
           <div class="flex gap-1">
-          <SearchButton />
-          {platform === "vtex" && <CartButtonVTEX />}
-          {platform === "vnda" && <CartButtonVDNA />}
-        </div>
+            <SearchButton />
+            {platform === "vtex" && <CartButtonVTEX />}
+            {platform === "vnda" && <CartButtonVDNA />}
+          </div>
         </div>
       </div>
     </>
