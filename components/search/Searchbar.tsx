@@ -77,13 +77,13 @@ function Searchbar({
 
   return (
     <div
-      class="w-full grid gap-8 px-4 py-6 overflow-y-hidden"
+      class="w-full grid gap-8 px-4 py-6 overflow-y-hidden rounded-md lg:rounded-xl"
       style={{ gridTemplateRows: "min-content auto" }}
     >
-      <form id={id} action={action} class="join">
+      <form id={id} action={action} class="join flex">
         <Button
           type="submit"
-          class="join-item btn-square"
+          class="join-item btn-square stroke-[#8465BA] text-[#8465BA]"
           aria-label="Search"
           for={id}
           tabIndex={-1}
@@ -95,7 +95,7 @@ function Searchbar({
         <input
           ref={searchInputRef}
           id="search-input"
-          class="input input-bordered join-item flex-grow"
+          class="flex-grow  border-[1px] border-solid border-[#E7D9FD] bg-[#F7F3FE] h-[45px] pl-2 w-[170px] rounded-md placeholder:text-[#6A5095]"
           name={name}
           onInput={(e) => {
             const value = e.currentTarget.value;
@@ -116,10 +116,10 @@ function Searchbar({
         />
         <Button
           type="button"
-          class="join-item btn-ghost btn-square hidden sm:inline-flex"
+          class="join-item flex justify-center items-center btn-square sm:inline-flex stroke-[#8465BA] text-[#8465BA]" 
           onClick={() => displaySearchPopup.value = false}
         >
-          <Icon id="XMark" size={24} strokeWidth={2} />
+          <Icon id="XMark" class="text-[#8465BA]" size={24} strokeWidth={2} />
         </Button>
       </form>
 

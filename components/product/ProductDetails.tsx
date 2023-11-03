@@ -39,6 +39,7 @@ export interface Props {
      * @default product
      */
     name?: "concat" | "productGroup" | "product";
+    classes?: string
   };
 }
 
@@ -116,15 +117,15 @@ function ProductInfo({ page, layout }: { page: ProductDetailsPage } & Props) {
       <div class="mt-4">
         <div class="flex flex-row gap-2 items-center">
           {(listPrice ?? 0) > price && (
-            <span class="line-through text-base-300 text-xs">
+            <span class="line-through text-xs text-[#C3C3C3]">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
           )}
-          <span class="font-medium text-xl text-secondary">
+          <span class="font-bold text-xl text-[#6A5095]">
             {formatPrice(price, offers?.priceCurrency)}
           </span>
         </div>
-        <span class="text-sm text-base-300">
+        <span class="text-sm text-[#373737]">
           {installments}
         </span>
       </div>
@@ -149,6 +150,7 @@ function ProductInfo({ page, layout }: { page: ProductDetailsPage } & Props) {
                   />
                   <WishlistButton
                     variant="full"
+                    classes="rounded-md bg-[#E7D9FD] w-[240px] h-[45px] text-[#6A5095] flex items-center justify-center"
                     productID={productID}
                     productGroupID={productGroupID}
                   />

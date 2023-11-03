@@ -23,7 +23,7 @@ function Header(props: Props) {
 
           {props.title && (
             <h2
-              class={`block ${props.banner ? ' m-auto text-2xl sm:max-w-[180px]' : 'text-3xl'} font-semibold text-[#4f3c70]`}
+              class={`block ${props.banner ? 'max-[500px]:block  max-[500px]:max-w-[200px] m-auto text-2xl sm:max-w-[180px]' : 'text-3xl'} font-semibold text-[#4f3c70]`}
             >
               {props.title}
             </h2>

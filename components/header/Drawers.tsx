@@ -35,7 +35,7 @@ const Aside = (
         <span class="font-medium text-2xl">{title}</span>
       </h2>
       {onClose && (
-        <Button class="btn btn-ghost" onClick={onClose}>
+        <Button class="text-[#8465BA] w-[56px] flex justify-center" onClick={onClose}>
           <Icon id="XMark" size={24} strokeWidth={2} />
         </Button>
       )}

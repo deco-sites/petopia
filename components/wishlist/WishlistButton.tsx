@@ -8,12 +8,14 @@ export interface Props {
   productID: string;
   productGroupID?: string;
   variant?: "icon" | "full";
+  classes: string | null;
 }
 
 function WishlistButton({
   variant = "icon",
   productGroupID,
   productID,
+  classes,
 }: Props) {
   const { user } = useUser();
   const item = { sku: productID, productId: productGroupID };
@@ -26,7 +28,7 @@ function WishlistButton({
 
   return (
     <Button
-      class="text-[#6a5095] gap-2"
+      class={`gap-2 rounded-md text-[#6A5095] ${classes}`}
       loading={fetching.value}
       aria-label="Add to wishlist"
       onClick={async (e) => {

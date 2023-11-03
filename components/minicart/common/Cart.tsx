@@ -116,7 +116,7 @@ function Cart({
               <div class="border-t border-base-200 pt-4 flex flex-col justify-end items-end gap-2 mx-4">
                 <div class="flex justify-between items-center w-full">
                   <span>Total</span>
-                  <span class="font-medium text-xl">
+                  <span class="font-bold text-xl">
                     {formatPrice(total, currency, locale)}
                   </span>
                 </div>
@@ -129,7 +129,7 @@ function Cart({
                 <a class="inline-block w-full" href={checkoutHref}>
                   <Button
                     data-deco="buy-button"
-                    class="btn-primary btn-block"
+                    class="no-animation rounded-md bg-[#8465BA] h-[45px] text-white w-full"
                     disabled={loading || isEmtpy}
                     onClick={() => {
                       sendEvent({

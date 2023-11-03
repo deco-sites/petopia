@@ -78,7 +78,7 @@ function CartItem(
           <Button
             disabled={loading || isGift}
             loading={loading}
-            class="btn-ghost btn-square"
+            class="rounded-full"
             onClick={withLoading(async () => {
               const analyticsItem = itemToAnalyticsItem(index);
 
@@ -94,10 +94,10 @@ function CartItem(
           </Button>
         </div>
         <div class="flex items-center gap-2">
-          <span class="line-through text-base-300 text-sm">
+          <span class="line-through text-[#C3C3C3] text-sm">
             {formatPrice(list, currency, locale)}
           </span>
-          <span class="text-sm text-secondary">
+          <span class="font-medium text-sm text-[#6A5095]">
             {isGift ? "Grátis" : formatPrice(sale, currency, locale)}
           </span>
         </div>

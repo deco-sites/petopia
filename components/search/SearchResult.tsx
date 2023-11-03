@@ -71,18 +71,18 @@ function Result({
               aria-label="previous page link"
               rel="prev"
               href={pageInfo.previousPage ?? "#"}
-              class="btn btn-ghost join-item"
+              class="no-animation rounded-full text-white bg-[#8465BA] flex justify-center items-center w-[40px] h-[40px]"
             >
               <Icon id="ChevronLeft" size={24} strokeWidth={2} />
             </a>
-            <span class="btn btn-ghost join-item">
+            <span class="join-item text-[#8465BA]">
               Page {pageInfo.currentPage + 1}
             </span>
             <a
               aria-label="next page link"
               rel="next"
               href={pageInfo.nextPage ?? "#"}
-              class="btn btn-ghost join-item"
+              class="no-animation rounded-full text-white bg-[#8465BA] flex justify-center items-center w-[40px] h-[40px]"
             >
               <Icon id="ChevronRight" size={24} strokeWidth={2} />
             </a>

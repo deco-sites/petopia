@@ -51,3 +51,10 @@
     @apply block mb-5 text-3xl text-center font-semibold text-[#4f3c70];
   }
 }
+
+
+.checkbox[aria-checked=true],
+.checkbox[checked=true] {
+    background-color: #8465BA !important;
+
+}

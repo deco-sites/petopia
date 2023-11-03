@@ -19,6 +19,10 @@ function Navbar({
 }) {
   const platform = usePlatform();
 
+/*   useEffect(()=>{
+    console.log("SEARCH")
+  }, []) */
+
   return (
     <>
       <div class="bg-[#f9fafb] flex flex-row h-20 items-center w-full justify-between px-2">
@@ -43,7 +47,7 @@ function Navbar({
         <div class="hidden md:flex">
           <ul class="flex gap-4 items-center">
             <li>
-              <a href="#" class="text-md text-[#8465BA]">
+              <a href="deco-sites-teste-bf.deno.dev" target="_blank" class="text-md text-[#8465BA]">
                 Black Friday Pet
               </a>
             </li>

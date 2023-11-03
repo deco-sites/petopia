@@ -1,9 +1,14 @@
 import Button from "$store/components/ui/Button.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
 import { useUI } from "$store/sdk/useUI.ts";
+import { useEffect, useRef } from "preact/compat";
 
 export default function SearchButton() {
   const { displaySearchDrawer, displaySearchPopup } = useUI();
+
+  useEffect(()=>{
+    console.log("SEARCH")
+  } ,[])
 
   return (
     <>

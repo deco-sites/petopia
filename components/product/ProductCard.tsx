@@ -49,6 +49,7 @@ interface Props {
   layout?: Layout;
 
   platform?: Platform;
+  index?: number;
 }
 
 const relative = (url: string) => {
@@ -60,7 +61,7 @@ const WIDTH = 200;
 const HEIGHT = 279;
 
 function ProductCard(
-  { product, preload, itemListName, layout, platform }: Props,
+  { product, preload, itemListName, layout, platform, index }: Props,
 ) {
   const {
     url,
@@ -315,18 +316,6 @@ function ProductCard(
             )}
           </>
         )}
-
-        {!l?.hide?.cta
-          ? (
-            <div
-              class={`flex-auto flex items-end ${
-                l?.onMouseOver?.showCta ? "lg:hidden" : ""
-              }`}
-            >
-              {cta}
-            </div>
-          )
-          : ""}
       </div>
     </div>
   );

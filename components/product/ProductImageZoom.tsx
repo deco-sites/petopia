@@ -21,7 +21,7 @@ function ProductImageZoom({ images, width, height }: Props) {
   return (
     <>
       <Button
-        class="hidden sm:inline-flex btn-ghost"
+        class="hidden sm:inline-flex "
         onClick={() => open.value = true}
       >
         <Icon id="Zoom" size={24} />

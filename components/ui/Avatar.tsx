@@ -16,9 +16,9 @@ const colors: Record<string, string> = {
   "vermelha": "bg-[#FF0000] ring-[#FF0000]",
 
   // Color variants - only applied when no color as content is passed
-  "active": "bg-neutral-focus text-neutral-content ring-neutral-focus ",
-  "disabled": "bg-neutral-content text-neutral",
-  "default": "bg-base-100 text-primary",
+  "active": "bg-[#8465BA] text-white border border-[#8465BA]",
+  "disabled": "bg-[#E7D9FD] text-white",
+  "default": "bg-[#F7F3FE] text-[#8465BA]",
 };
 
 interface Props {
@@ -30,7 +30,7 @@ const variants = {
   active: "ring ring-1 ring-offset-base-100 ring-offset-2",
   disabled:
     `relative after:absolute after:left-0 after:top-1/2 after:h-[1px] after:bg-red-800 after:w-full after:block after:-rotate-45 after:content-[""]`,
-  default: "border border-base-200 hover:border-primary",
+  default: "border border-base-200",
 };
 
 function Avatar({ content, variant = "default" }: Props) {
