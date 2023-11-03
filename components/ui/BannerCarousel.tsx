@@ -111,11 +111,11 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
         <Source
           fetchPriority={lcp ? "high" : "auto"}
           src={desktop}
-          width={398}
-          height={220}
+          width={1200}
+          height={300}
         />
         <img
-          class="object-cover w-[95%] m-auto h-full rounded-md"
+          class="object-cover w-full m-auto h-full rounded-md"
           loading={lcp ? "eager" : "lazy"}
           width={398}
           height={220}
@@ -218,7 +218,7 @@ function BannerCarousel(props: Props) {
       id={id}
       class="flex flex-col mt-7"
     >
-      <Slider class="carousel carousel-center ol-span-full row-span-full gap-6">
+      <Slider class="carousel carousel-center container ol-span-full row-span-full gap-6">
         {images?.map((image, index) => (
           <Slider.Item index={index} class="carousel-item w-full">
             <BannerItem image={image} lcp={index === 0 && preload} />

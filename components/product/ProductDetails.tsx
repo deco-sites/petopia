@@ -7,7 +7,6 @@ import AddToCartButtonVNDA from "$store/islands/AddToCartButton/vnda.tsx";
 import AddToCartButtonVTEX from "$store/islands/AddToCartButton/vtex.tsx";
 import AddToCartButtonWake from "$store/islands/AddToCartButton/wake.tsx";
 import AddToCartButtonLinx from "$store/islands/AddToCartButton/linx.tsx";
-import ProductViews from "$store/islands/ProductViews.tsx";
 import AddToCartButtonShopify from "$store/islands/AddToCartButton/shopify.tsx";
 import OutOfStock from "$store/islands/OutOfStock.tsx";
 import ProductImageZoom from "$store/islands/ProductImageZoom.tsx";
@@ -197,9 +196,6 @@ function ProductInfo({ page, layout }: { page: ProductDetailsPage } & Props) {
           : <OutOfStock productID={productID} />}
       </div>
       {/* Shipping Simulation */}
-      <div className="mt-8">
-        <ProductViews productID={productID} />
-      </div>
       <div class="mt-8">
         {platform === "vtex" && (
           <ShippingSimulation

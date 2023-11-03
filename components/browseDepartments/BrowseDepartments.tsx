@@ -24,7 +24,7 @@ const BrowseDepartments = (props: Props) => {
 
         <div class="flex gap-1 items-stretch justify-center flex-wrap">
           {departments?.map((department) => {
-            return <a href={department.link} class="py-3 px-6 rounded-md bg-[#F7F3FE] font-medium	flex-wrap">{department.title}</a>;
+            return <a href={department.link} class="py-3 px-6 cursor-pointer rounded-md bg-[#F7F3FE] font-medium	flex-wrap">{department.title}</a>;
           })}
         </div>
       </div>
