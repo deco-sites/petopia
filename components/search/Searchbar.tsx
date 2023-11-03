@@ -53,7 +53,7 @@ export interface Props {
 }
 
 function Searchbar({
-  placeholder = "What are you looking for?",
+  placeholder = "O que você procura?",
   action = "/s",
   name = "q",
   loader,
@@ -71,6 +71,8 @@ function Searchbar({
     if (displaySearchPopup.value === true) {
       searchInputRef.current?.focus();
     }
+
+    console.log(displaySearchPopup.value)
   }, [displaySearchPopup.value]);
 
   return (

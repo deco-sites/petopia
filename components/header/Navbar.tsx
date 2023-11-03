@@ -26,7 +26,7 @@ function Navbar({
 
   return (
     <>
-      <div class="bg-[#f9fafb] flex flex-row items-center w-full justify-between px-2">
+      <div class="bg-[#f9fafb] flex flex-row h-20 items-center w-full justify-between px-2">
         <div class="flex flex-1 justify-start items-center gap-x-3">
           <MenuButton />
           {logo && (
@@ -67,8 +67,25 @@ function Navbar({
         <div class=" flex-1 flex justify-end items-center gap-x-3	">
           <div class="flex gap-1">
             <SearchButton />
+            <Searchbar searchbar={searchbar} />
+
             {platform === "vtex" && <CartButtonVTEX />}
             {platform === "vnda" && <CartButtonVDNA />}
+            <a
+              class="flex items-center sm:hidden"
+              href="https://www.deco.cx"
+            >
+              <Icon
+                id="User"
+                size={24}
+                class="fill-[transparent] text-[#6A5095]"
+                strokeWidth={2}
+              />
+              <span class="text-xs w-[95px] block fill-[transparent] text-[#6A5095]">
+                Entrar
+                Cadastrar-se
+              </span>
+            </a>
           </div>
         </div>
       </div>

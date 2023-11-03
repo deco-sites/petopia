@@ -108,12 +108,12 @@ function ProductCard(
   return (
     <div
       id={id}
-      class={`card card-compact group w-full border-purple-300 rounded-lg	 ${
+      class={`card overflow-hidden card-compact group w-full border-purple-300 rounded-lg	 ${
         align === "center" ? "text-center" : "text-start"
-      } ${l?.onMouseOver?.showCardShadow ? "lg:hover:card-bordered" : ""}
+      } 
         ${
         l?.onMouseOver?.card === "Move up" &&
-        "duration-500 transition-translate ease-in-out lg:hover:-translate-y-2"
+        "duration-500 transition-translate ease-in-out"
       }
       `}
       data-deco="view-product"
@@ -146,11 +146,7 @@ function ProductCard(
               ? "left-2"
               : "right-2"
           }
-          ${
-            l?.onMouseOver?.showFavoriteIcon
-              ? "lg:hidden lg:group-hover:block"
-              : "lg:hidden"
-          }
+      
         `}
         >
           {platform === "vtex" && (
@@ -164,7 +160,7 @@ function ProductCard(
         <a
           href={url && relative(url)}
           aria-label="view product"
-          class="grid grid-cols-1 grid-rows-1 w-full border border-soli"
+          class="grid grid-cols-1 rounded-[10px] grid-rows-1 w-full"
         >
           <Image
             src={front.url!}

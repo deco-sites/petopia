@@ -107,7 +107,7 @@ function CategoryGrid(props: CategoryGridProps) {
   } = props;
 
   return (
-    <div class="px-4 w-full py-7 flex flex-col gap-8 lg:gap-10 md:px-0 lg:py-10 lg:w-1/2">
+    <div class="px-4 w-full flex flex-col gap-8 lg:gap-10 md:px-0 lg:w-1/2">
       <Header
         title={header.title}
         description={header.description || ""}
@@ -138,7 +138,7 @@ function CategorySection(props: CategorySectionProps) {
   return (
     <section>
       <div class="container py-7">
-        <h2 class="blocktext-3xl text-3xl py-w text-center font-semibold text-[#4f3c70]">{title}</h2>
+        <h2 class="blocktext-3xl mb-5 text-3xl py-w text-center font-semibold text-[#4f3c70]">{title}</h2>
         <div class="flex flex-col gap-10 lg:flex-row">
           {categoryGrid.map((item, index) => {
             return <CategoryGrid {...item} />;

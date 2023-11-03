@@ -11,6 +11,7 @@ export default function SearchButton() {
         class="text-[#3e2f57] hidden sm:block bg-transparent"
         aria-label="search icon button"
         onClick={() => {
+          console.log("CLICK")
           displaySearchPopup.value = !displaySearchPopup.value;
         }}
       >

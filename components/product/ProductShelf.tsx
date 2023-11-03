@@ -42,7 +42,7 @@ function ProductShelf({
 
   return (
     <div class="text-white">
-      <div class="w-full container py-7 flex flex-col gap-8 lg:gap-16 lg:py-10">
+      <div class="w-full container px-4 py-7 flex flex-col gap-4 lg:py-10">
         <Header
           title={title || ""}
           description={description || ""}
@@ -53,13 +53,13 @@ function ProductShelf({
 
         <div
           id={id}
-          class="container grid grid-cols-[48px_1fr_48px] px-0 sm:px-5"
+          class="container grid grid-cols-[48px_1fr_48px] py-3 px-0"
         >
           <Slider class="carousel carousel-center sm:carousel-end gap-6 col-span-full row-start-2 row-end-5">
             {products?.map((product, index) => (
               <Slider.Item
                 index={index}
-                class="carousel-item w-[270px] sm:w-[292px] first:pl-6 sm:first:pl-0 last:pr-6 sm:last:pr-0"
+                class="carousel-item w-[270px] sm:w-[292px] first:pl-6 rounded-[10px] sm:first:pl-0 last:pr-6 sm:last:pr-0 border border-solid border-[#B086F8]"
               >
                 <ProductCard
                   product={product}
@@ -73,12 +73,12 @@ function ProductShelf({
 
           <>
             <div class="hidden relative sm:block z-10 col-start-1 row-start-3">
-              <Slider.PrevButton class="btn btn-circle bg-[#6a5095] hover:bg-[#f7f3fe] text-white hover:text-[#f7f3fe] border-none absolute right-1/2">
+              <Slider.PrevButton class="btn btn-circle bg-[#6a5095] hover:bg-[#f7f3fe] text-white hover:text-[#6a5095] border-none absolute right-1/2">
                 <Icon size={24} id="ChevronLeft" strokeWidth={3} />
               </Slider.PrevButton>
             </div>
             <div class="hidden relative sm:block z-10 col-start-3 row-start-3">
-              <Slider.NextButton class="btn btn-circle bg-[#6a5095] hover:bg-[#f7f3fe] text-white hover:text-[#f7f3fe border-none absolute left-1/2">
+              <Slider.NextButton class="btn btn-circle bg-[#6a5095] hover:bg-[#f7f3fe] text-white hover:text-[#6a5095] border-none absolute left-1/2">
                 <Icon size={24} id="ChevronRight" strokeWidth={3} />
               </Slider.NextButton>
             </div>

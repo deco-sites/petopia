@@ -87,12 +87,7 @@ const DEFAULT_PROPS = {
 };
 
 function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
-  const {
-    alt,
-    mobile,
-    desktop,
-    action,
-  } = image;
+  const { alt, mobile, desktop, action } = image;
 
   return (
     <div
@@ -100,8 +95,9 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
       aria-label={action?.label}
       class="relative h-auto overflow-y-hidden w-full"
     >
-      <Picture preload={lcp}>
+      <Picture class="rounded-md lg:rounded-xl " preload={lcp}>
         <Source
+          class="object-cover px-4 lg:px-0 w-full m-auto h-full rounded-md lg:rounded-xl"
           media="(max-width: 767px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={mobile}
@@ -109,13 +105,14 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           height={220}
         />
         <Source
+          class="object-cover px-4 lg:px-0 w-full m-auto h-full rounded-md lg:rounded-xl"
           fetchPriority={lcp ? "high" : "auto"}
           src={desktop}
           width={1200}
           height={300}
         />
         <img
-          class="object-cover w-full m-auto h-full rounded-md"
+          class="object-cover px-4 lg:px-0 w-full m-auto h-full rounded-md lg:rounded-xl"
           loading={lcp ? "eager" : "lazy"}
           width={398}
           height={220}
@@ -123,28 +120,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           alt={alt}
         />
       </Picture>
-      {action && (
-        <div class="absolute h-min top-0 bottom-0 m-auto opacity-0 left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px] lg:max-w-[380px] flex flex-col gap-4 p-4 items-center justify-center">
-          <span class="font-medium text-xl text-base-100">
-            {action.subTitle}
-          </span>
-          <span class="text-6xl font-medium text-base-100">
-            {action.title}
-          </span>
-          <a
-            href={action.href}
-            class="underline text-xl text-white underline-offset-8 flex items-center gap-2"
-          >
-            {action.label}
-            <Icon
-              id="ArrowRight"
-              width={24}
-              height={24}
-              class="stroke-current"
-            />
-          </a>
-        </div>
-      )}
+
     </div>
   );
 }
@@ -214,10 +190,7 @@ function BannerCarousel(props: Props) {
   const id = useId();
 
   return (
-    <div
-      id={id}
-      class="flex flex-col mt-7"
-    >
+    <div id={id} class="flex flex-col mt-7">
       <Slider class="carousel carousel-center container ol-span-full row-span-full gap-6">
         {images?.map((image, index) => (
           <Slider.Item index={index} class="carousel-item w-full">

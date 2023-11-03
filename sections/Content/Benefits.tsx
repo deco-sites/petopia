@@ -43,7 +43,7 @@ export default function Benefits(props: Props) {
 
   const listOfBenefits = benefits.map((benefit, index) => {
     return (
-      <div class="bg-[#F7F3FE] p-8 rounded-md flex flex-col items-center justify-center">
+      <div class="bg-[#F7F3FE] p-8 rounded-md lg:rounded-xl flex flex-col items-center justify-center">
         <div class="m-auto">
           <Icon
             id={benefit.icon}
