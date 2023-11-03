@@ -15,9 +15,9 @@ export default function MenuButton() {
     >
       <Icon
         id="Bars3"
-        size={24}
+        size={30}
         strokeWidth={0.01}
-        class="fill-current text-white"
+        class="fill-current text-[#4F3C70]"
       />
     </Button>
   );

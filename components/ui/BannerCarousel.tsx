@@ -98,32 +98,33 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
     <div
       href={action?.href ?? "#"}
       aria-label={action?.label}
-      class="relative h-[600px] overflow-y-hidden w-full"
+      class="relative h-auto overflow-y-hidden w-full"
     >
       <Picture preload={lcp}>
         <Source
           media="(max-width: 767px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={mobile}
-          width={360}
-          height={600}
+          width={398}
+          height={220}
         />
         <Source
-          media="(min-width: 768px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={desktop}
-          width={1440}
-          height={600}
+          width={398}
+          height={220}
         />
         <img
-          class="object-cover w-full h-full"
+          class="object-cover w-[95%] m-auto h-full rounded-t-md"
           loading={lcp ? "eager" : "lazy"}
+          width={398}
+          height={220}
           src={desktop}
           alt={alt}
         />
       </Picture>
       {action && (
-        <div class="absolute h-min top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px] lg:max-w-[380px] flex flex-col gap-4 p-4">
+        <div class="absolute h-min top-0 bottom-0 m-auto opacity-0 left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px] lg:max-w-[380px] flex flex-col gap-4 p-4 items-center justify-center">
           <span class="font-medium text-xl text-base-100">
             {action.subTitle}
           </span>
@@ -168,7 +169,7 @@ function Dots({ images, interval = 0 }: Props) {
             <Slider.Dot index={index}>
               <div class="py-5">
                 <div
-                  class="w-2 h-2 rounded-full group-disabled:bg-red-500 bg-white"
+                  class="w-2 h-2 rounded-full group-disabled:h3 group-disabled:w-3 group-disabled:bg-[#4F3C70] bg-[#6A5095]"
                   style={{ animationDuration: `${interval}s` }}
                 />
               </div>
@@ -215,17 +216,15 @@ function BannerCarousel(props: Props) {
   return (
     <div
       id={id}
-      class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px]"
+      class="flex flex-col mt-7"
     >
-      <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-6">
+      <Slider class="carousel carousel-center ol-span-full row-span-full gap-6">
         {images?.map((image, index) => (
           <Slider.Item index={index} class="carousel-item w-full">
             <BannerItem image={image} lcp={index === 0 && preload} />
           </Slider.Item>
         ))}
       </Slider>
-
-      <Buttons />
 
       <Dots images={images} interval={interval} />
 
