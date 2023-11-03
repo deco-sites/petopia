@@ -71,7 +71,7 @@ export default function InstagramPosts({
   ],
 }: SectionProps<typeof loader>) {
   return (
-    <div class="w-full container px-4 py-8 flex flex-col gap-14 lg:gap-20 lg:py-10 lg:px-0">
+    <div class="w-full container px-4 py-7 flex flex-col gap-14 lg:gap-20 lg:py-10 lg:px-0">
       <Header
         title={title}
         description={description}

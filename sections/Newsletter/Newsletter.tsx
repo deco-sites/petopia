@@ -94,7 +94,7 @@ export default function Newsletter(props: Props) {
       {(!layout?.content?.alignment ||
         layout?.content?.alignment === "Center") && (
         <div
-          class={`container flex flex-col rounded p-4 gap-6 lg:p-16 lg:gap-12 ${bgLayout}`}
+          class={`container flex flex-col rounded p-4 gap-6 lg:p-16 lg:gap-8 ${bgLayout}`}
         >
           {headerLayout}
           <div class="flex justify-center">
@@ -104,7 +104,7 @@ export default function Newsletter(props: Props) {
       )}
       {layout?.content?.alignment === "Left" && (
         <div
-          class={`container flex flex-col rounded p-4 gap-6 lg:p-16 lg:gap-12 ${bgLayout}`}
+          class={`container flex flex-col rounded p-4 gap-6 lg:p-16 lg:gap-8 ${bgLayout}`}
         >
           {headerLayout}
           <div class="flex justify-start">
@@ -114,7 +114,7 @@ export default function Newsletter(props: Props) {
       )}
       {layout?.content?.alignment === "Side to side" && (
         <div
-          class={`container flex flex-col rounded justify-between lg:flex-row p-4 gap-6 lg:p-16 lg:gap-12 ${bgLayout}`}
+          class={`container flex flex-col rounded justify-between lg:flex-row p-4 gap-6 lg:p-16 lg:gap-8 ${bgLayout}`}
         >
           {headerLayout}
           <div class="flex justify-center">

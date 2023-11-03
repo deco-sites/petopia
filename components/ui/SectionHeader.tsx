@@ -15,18 +15,18 @@ function Header(props: Props) {
     <>
       {props.title || props.description ? (
         <div
-          class={`bg-[#F7F3FE] relative flex gap-2 items-center justify-center rounded-md h-24	${
+          class={`${props.banner ? 'bg-[#F7F3FE] justify-center h-24' : 'text-3xl  justify-start'} relative flex gap-2 items-center  rounded-md	${
             props.alignment === "left" ? "text-left" : "text-center"
           }`}
         >
           {props.banner && <img loading="lazy" class="h-full absolute left-0 bottom-0 scale-[1.3]	translate-y-[-16%]" src={props.banner} alt={props.title} />}
 
           {props.title && (
-            <h1
-              class={`block m-auto text-2xl max-w-[180px] font-semibold text-[#4f3c70]`}
+            <h2
+              class={`block${props.banner ? ' m-auto text-2xl max-w-[180px]' : 'text-3xl'} font-semibold text-[#4f3c70]`}
             >
               {props.title}
-            </h1>
+            </h2>
           )}
           {props.description && (
             <p

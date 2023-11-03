@@ -186,7 +186,7 @@ export default function Gallery(props: Props) {
       : "sm:row-span-2";
 
   return (
-    <section class="container px-4 py-8 flex flex-col gap-8 lg:gap-10 lg:py-10 lg:px-0">
+    <section class="container px-4 py-7 flex flex-col gap-8 lg:gap-10 lg:py-10 lg:px-0">
       <Header
         title={title}
         description={description}

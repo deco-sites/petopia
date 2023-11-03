@@ -37,9 +37,9 @@ export default function ImageGallery({
 }: Props) {
   return (
     <section class="px-4 max-w-[1360px] lg:m-auto">
-      <h1 class="text-base-content text-4xl text-center mt-10 mb-4 lg:text-6xl lg:mb-6">
+      <h2 class="text-base-content text-4xl text-center mt-10 mb-4 lg:text-6xl lg:mb-6">
         {title}
-      </h1>
+      </h2>
       <p class="text-center text-base-content text-2xl leading-7">
         {description}
       </p>

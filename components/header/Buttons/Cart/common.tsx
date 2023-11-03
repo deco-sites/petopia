@@ -44,7 +44,7 @@ function CartButton({ loading, currency, total, items }: Props) {
           id="ShoppingCart"
           size={24}
           strokeWidth={2}
-          class="fill-current text-white"
+          class="fill-current text-fill-current text-[#6A5095]"
         />
       </Button>
     </div>

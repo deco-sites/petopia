@@ -49,13 +49,13 @@ function Card(
         class={`lg:p-8 w-full h-full top-0 left-0 flex flex-col`}
       >
         {label &&
-          <h3 class=" text-center text-[#4F3C70]">{label}</h3>}
+          <h3 class="text-sm text-center md:text-lg text-[#4F3C70]">{label}</h3>}
         {description && (
-          <p class=" text-center	text-[#4F3C70]">{description}</p>
+          <p class=" text-sm text-center md:text-lg	text-[#4F3C70]">{description}</p>
         )}
         {buttonText && (
           <div class="flex justify-start mt-4">
-            <span class="text-base text-neutral-50 underline">
+            <span class="text-sm md:text-lg	text-neutral-50 underline">
               {buttonText}
             </span>
           </div>
@@ -92,7 +92,7 @@ function CategoryGrid(props: Props) {
     <div class="">
       <div
         id={id}
-        class="container px-4 py-8 flex flex-col gap-8 lg:gap-10 md:px-0 lg:py-10"
+        class="container px-4 py-7 flex flex-col gap-8 lg:gap-10 md:px-0 lg:py-10"
       >
         <Header
           title={header.title}

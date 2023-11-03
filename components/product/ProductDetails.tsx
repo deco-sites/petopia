@@ -103,7 +103,7 @@ function ProductInfo({ page, layout }: { page: ProductDetailsPage } & Props) {
             </span>
           )}
         </div>
-        <h1>
+        <h2>
           <span class="font-medium text-xl capitalize">
             {layout?.name === "concat"
               ? `${isVariantOf?.name} ${name}`
@@ -111,7 +111,7 @@ function ProductInfo({ page, layout }: { page: ProductDetailsPage } & Props) {
               ? isVariantOf?.name
               : name}
           </span>
-        </h1>
+        </h2>
       </div>
       {/* Prices */}
       <div class="mt-4">

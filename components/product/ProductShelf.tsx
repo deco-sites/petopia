@@ -42,7 +42,7 @@ function ProductShelf({
 
   return (
     <div class="text-white">
-      <div class="w-full container  py-8 flex flex-col gap-12 lg:gap-16 lg:py-10">
+      <div class="w-full container py-7 flex flex-col gap-8 lg:gap-16 lg:py-10">
         <Header
           title={title || ""}
           description={description || ""}
@@ -73,12 +73,12 @@ function ProductShelf({
 
           <>
             <div class="hidden relative sm:block z-10 col-start-1 row-start-3">
-              <Slider.PrevButton class="btn btn-circle bg-neutral-700 text-white border-none absolute right-1/2">
+              <Slider.PrevButton class="btn btn-circle bg-[#6a5095] hover:bg-[#f7f3fe] text-white hover:text-[#f7f3fe] border-none absolute right-1/2">
                 <Icon size={24} id="ChevronLeft" strokeWidth={3} />
               </Slider.PrevButton>
             </div>
             <div class="hidden relative sm:block z-10 col-start-3 row-start-3">
-              <Slider.NextButton class="btn btn-circle bg-neutral-700 text-white border-none absolute left-1/2">
+              <Slider.NextButton class="btn btn-circle bg-[#6a5095] hover:bg-[#f7f3fe] text-white hover:text-[#f7f3fe border-none absolute left-1/2">
                 <Icon size={24} id="ChevronRight" strokeWidth={3} />
               </Slider.NextButton>
             </div>

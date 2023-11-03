@@ -115,7 +115,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           height={220}
         />
         <img
-          class="object-cover w-[95%] m-auto h-full rounded-t-md"
+          class="object-cover w-[95%] m-auto h-full rounded-md"
           loading={lcp ? "eager" : "lazy"}
           width={398}
           height={220}
