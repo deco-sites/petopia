@@ -1,17 +1,12 @@
 import type { Props as SearchbarProps } from "$store/components/search/Searchbar.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
 import { MenuButton, SearchButton } from "$store/islands/Header/Buttons.tsx";
-import CartButtonLinx from "$store/islands/Header/Cart/linx.tsx";
-import CartButtonShopify from "$store/islands/Header/Cart/shopify.tsx";
 import CartButtonVDNA from "$store/islands/Header/Cart/vnda.tsx";
 import CartButtonVTEX from "$store/islands/Header/Cart/vtex.tsx";
-import CartButtonWake from "$store/islands/Header/Cart/wake.tsx";
 import Searchbar from "$store/islands/Header/Searchbar.tsx";
 import { usePlatform } from "$store/sdk/usePlatform.tsx";
 import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
-import NavItem from "./NavItem.tsx";
-import { navbarHeight } from "./constants.ts";
 
 function Navbar({
   items,
@@ -72,7 +67,7 @@ function Navbar({
             {platform === "vtex" && <CartButtonVTEX />}
             {platform === "vnda" && <CartButtonVDNA />}
             <a
-              class="flex items-center sm:hidden"
+              class="items-center hidden lg:flex"
               href="https://www.deco.cx"
             >
               <Icon
